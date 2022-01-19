@@ -1,0 +1,251 @@
+:root{
+  --SoftCyan: hsl(174, 77%, 80%);
+  --StrongCyan: hsl(174, 86%, 45%);
+  --LightGrayishRed: hsl(14, 92%, 95%);
+  --LightRed: hsl(15, 100%, 70%);
+  --PaleBlue: hsl(226, 100%, 87%);
+  --White: hsl (0, 0%, 100%);
+  --VeryPaleBlue: hsl(230, 100%, 99%);
+  --LightGrayishBlue: hsl(224, 65%, 95%);
+  --LightBlue: hsl(223, 50%, 87%);
+  --GrayishBlue: hsl(225, 20%, 60%);
+  --DarkDesaturatedBlue: hsl(227, 35%, 25%);
+}
+
+body{
+  font-family: 'Manrope', sans-serif;
+}
+
+.main {
+  background: url(./images/bg-pattern.svg) no-repeat;
+  display: grid;
+  height: 100vh;
+  justify-items: center;
+  width: 100%;
+}
+
+.wrapper{
+  width: 90%;
+}
+
+.header{
+  background: url(./images/pattern-circles.svg) no-repeat center;
+  height: 150px;
+  margin: 50px 0px ;
+  text-align: center;
+}
+
+h2{
+  color: var(--DarkDesaturatedBlue);
+  font-size: 19px;
+  font-weight: 800;
+  margin-bottom: 0px;
+  padding-top: 20px;
+}
+
+.header p {
+  color: var(--GrayishBlue);
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 2;
+  padding: 0px 30px;
+}
+
+.container{
+  background: white;
+  box-shadow: 3px 1px 10px 1px rgb(0 0 0 / 20%);
+  display: grid;
+  justify-items: center;
+  padding: 20px;
+}
+
+h3{
+  align-self: center;
+  color: var(--GrayishBlue);
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.price{
+  color: var(--DarkDesaturatedBlue) ;
+  font-size: 30px;
+  font-weight: 800;
+}
+
+/* SliderRange styles https://www.youtube.com/watch?v=0oePYYXBmm0 */
+.rangeSliderWrapper{
+  align-items: center;
+  height: 30px;
+  margin: 10px 0px;
+  position: relative;
+  width: 100%;
+}
+
+.rangeSlider .sliderRange {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 0.4em;
+  outline: none;
+  border-radius: 3px;
+  background-color: var(--LightGrayishBlue);
+  margin:0;
+  top: 50%;
+}
+
+.rangeSlider .sliderRange::-webkit-slider-thumb{
+  -webkit-appearance: none;
+  width: 1.7em;
+  height: 1.7em;
+  cursor: pointer;
+  z-index: 3;
+  position: relative;
+}
+
+.rangeSlider .sliderThumb{
+  position: absolute;
+  width: 2em;
+  height: 2em;
+  background: url(./images/icon-slider.svg) no-repeat center;
+  background-color: var(--SoftCyan);
+  border-radius: 50%;
+  -webkit-appearance: none;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.rangeSlider:hover .sliderThumb{
+  background-color: var(--StrongCyan);
+}
+
+.rangeSlider .progress {
+  background-color: var(--StrongCyan);
+  border-radius: 3px;
+  height: 0.4em;
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50%;
+}
+
+/* Toggle styles */
+.toggleContainer{
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  font-weight: 600;
+  justify-items: center;
+  margin-bottom: 30px;
+}
+
+.toggleContainer p{
+  color: var(--GrayishBlue);
+  font-size: 10px;
+  margin: 5px;
+}
+
+.discount{
+  background-color: var(--LightGrayishRed);
+  border-radius: 15px;
+  color: var(--LightRed);
+  font-weight: 600;
+  padding: 0px 10px ;
+  width: 100px;
+}
+
+.switch {
+    display: inline-block;
+    height: 20px;
+    position: relative;
+    width: 40px;
+  }
+  
+  .switch input { 
+    height: 0;
+    opacity: 0;
+    width: 0;
+  }
+  
+  .slider {
+    -webkit-transition: .4s;
+    background-color:var(--LightGrayishBlue);
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    -webkit-transition: .4s;
+    background-color: white;
+    bottom: 4px;
+    content: "";
+    height: 13px;
+    left: 4px;
+    position: absolute;
+    transition: .4s;
+    width: 13px;
+  }
+  
+  input:checked + .slider {
+    background-color: var(--SoftCyan);
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px var(--SoftCyan);
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+  /* list and button styles */
+
+  .footer{
+    display: flex;
+    flex-direction: column;
+  }
+  ul{
+    list-style: none;
+    padding: 0;
+    text-align: center;    
+  }
+  
+  li{
+    font-size: 12px;
+    margin: 8px;
+  }
+
+  li img{
+    margin-right: 8px;
+  }
+
+  .button{
+    background-color: var(--DarkDesaturatedBlue);
+    border-radius: 20px;
+    border: none;
+    color: white;
+    font-family:'Manrope', sans-serif; ;
+    font-size: 12px;
+    font-weight: 600;
+    height: 40px;
+    letter-spacing: 0.06em;
+    width: 100%;
+  }

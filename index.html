@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <title>Frontend Mentor | Interactive pricing component</title>
+
+</head>
+<body>
+<section class="main">
+  <div class="wrapper">
+      <section class="header">
+        <h2>Simple, traffic-based pricing</h2>
+        <p>Sign-up for our 30-day trial. No credit card required. </p>
+      </section>
+  
+      <section class="container">
+        <h3><span class="numPageViews">100K</span> PAGEVIEWS</h3>
+        <div class="rangeSliderWrapper">
+          <div class="rangeSlider">
+            <input type="range" class="sliderRange" id="rangeViews" name="rangeViews" min="10" max="1000">
+            <div class="sliderThumb"></div>
+            <div class="progress"></div>
+          </div>
+        </div>
+        <h3><span class="price">$16.00 </span>/month</h3>
+        <div class="toggleContainer">
+          <p>Monthly Billing</p>
+          <label class="switch">
+            <input type="checkbox">
+            <span class="slider round"></span>
+          </label>
+          <p>Yearly Billing <span class="discount"> - 25%</span></p>
+        </div>
+        <section class="footer">
+          <ul>
+            <li><img class="iconCheck" src="./images/icon-check.svg"> Unlimited websites</li>
+            <li><img class="iconCheck" src="./images/icon-check.svg"> 100% data ownership</li>
+            <li><img class="iconCheck" src="./images/icon-check.svg"> Email reports</li>
+          </ul>
+          <button class="button" >Start my trial</button>
+        </section>  </input>
+      </section>
+    </div>
+</section>
+</body>
+</html>
