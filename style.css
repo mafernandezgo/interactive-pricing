@@ -48,7 +48,8 @@ h2{
   font-size: 15px;
   font-weight: 600;
   line-height: 2;
-  padding: 0px 30px;
+  width: 200px;
+  margin: 10px auto;
 }
 
 .container{
@@ -162,6 +163,10 @@ h3{
   width: 100px;
 }
 
+.discountText{
+  display: none;
+}
+
 .switch {
     display: inline-block;
     height: 20px;
@@ -258,7 +263,7 @@ h3{
     width: 200px;
   }
 
-  @media(min-width:1440px){
+  @media(min-width:1200px){
     
     .wrapper{
       width: 40%;
@@ -266,6 +271,10 @@ h3{
 
     h2{
       padding-top: 40px;
+    }
+
+    .header p{
+      width: 100%;
     }
 
     .container{
@@ -294,6 +303,10 @@ h3{
     ul{
       width: 200px;
       text-align: left;
+    }
+
+    .discountText{
+      display: inline;
     }
   
   }
