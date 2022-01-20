@@ -82,61 +82,37 @@ h3{
 
 /* SliderRange styles https://www.youtube.com/watch?v=0oePYYXBmm0 */
 .rangeSliderWrapper{
-  align-items: center;
-  height: 30px;
+  height: 50px;
   margin: 10px 0px;
-  position: relative;
   width: 100%;
+  display: flex;
+  align-items: center;
 }
 
-.rangeSlider .sliderRange {
-  /* -webkit-appearance: none; */
+.sliderRange {
+  -webkit-appearance: none;
   width: 100%;
-  height: 0.4em;
+  height: 0.5em;
   outline: none;
   border-radius: 3px;
-  background-color: var(--LightGrayishBlue);
+  background-color: linear-gradient(90deg, var(--LightGrayishBlue) 80%, 90deg,var(--LightGrayishBlue) 50%) ;
   margin:0;
   top: 50%;
-}
-/* 
-.rangeSlider .sliderRange::-webkit-slider-thumb{
-  -webkit-appearance: none;
-  width: 1.7em;
-  height: 1.7em;
-  cursor: pointer;
-  z-index: 3;
-  position: relative;
+  display: flex;
+  align-items: center;
 }
 
-.rangeSlider .sliderThumb{
-  position: absolute;
-  width: 2em;
-  height: 2em;
+.sliderRange::-webkit-slider-thumb{
+  -webkit-appearance: none;
+  width: 3em;
+  height: 3em;
+  cursor: pointer;
   background: url(./images/icon-slider.svg) no-repeat center;
   background-color: var(--SoftCyan);
   border-radius: 50%;
-  -webkit-appearance: none;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
+  position:relative;
+  bottom: 50%;
 }
-
-.rangeSlider:hover .sliderThumb{
-  background-color: var(--StrongCyan);
-}
-
-.rangeSlider .progress {
-  background-color: var(--StrongCyan);
-  border-radius: 3px;
-  height: 0.4em;
-  pointer-events: none;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 50%;
-} */
 
 /* Toggle styles */
 .toggleContainer{
@@ -174,12 +150,6 @@ h3{
     width: 40px;
   }
   
-  .switch input { 
-    height: 0;
-    opacity: 0;
-    width: 0;
-  }
-  
   .slider {
     -webkit-transition: .4s;
     background-color:var(--LightGrayishBlue);
@@ -193,14 +163,14 @@ h3{
   }
   
   .slider:before {
-    -webkit-transition: .4s;
+    -webkit-transition: 0.4s;
     background-color: white;
     bottom: 4px;
     content: "";
     height: 13px;
     left: 4px;
     position: absolute;
-    transition: .4s;
+    transition: 0.8s cubic-bezier(0.28, 0.90, 0.32, 1.40);
     width: 13px;
   }
   
