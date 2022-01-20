@@ -23,22 +23,30 @@
   
       <section class="container">
         <section class="priceContainer">
-          <h3 class="pageViews"><span class="numPageViews">100K</span> PAGEVIEWS</h3>
+          <h3 class="pageViews"><span class="numPageViews"></span>K PAGEVIEWS</h3>
           <div class="rangeSliderWrapper">
             <div class="rangeSlider">
-              <input type="range" class="sliderRange" id="rangeViews" name="rangeViews" min="10" max="1000">
-              <div class="sliderThumb"></div>
-              <div class="progress"></div>
+              <input type="range" class="sliderRange" list="rangeViews" name="rangeViews" min="0" max="1000" value="500">
+              <datalist id="rangeViews">
+                <option value="10"></option>
+                <option value="50"></option>
+                <option value="100"></option>
+                <option value="500"></option>
+                <option value="1000"></option>
+                </datalist>
+              <!-- <div class="sliderThumb"></div>
+              <div class="progress"></div> -->
             </div>
           </div>
-          <h3 class="pagePrice"><span class="price">$16.00 </span>/month</h3>
+          <h3 class="pagePrice"><span class="price"> $ <span class="priceValue"></span>.00</span> <span class="payment">/month</span></h3>
         </section>
         <section class="toggleContainer">
           <p>Monthly Billing</p>
           <label class="switch">
-            <input type="checkbox">
+            <input class="checkbox" type="checkbox">
             <span class="slider round"></span>
           </label>
+
           <p>Yearly Billing <span class="discount"> - 25%<span class="discountText"> discount</span></span></p>
         </section>
         <section class="footer">
@@ -48,9 +56,10 @@
             <li><img class="iconCheck" src="./images/icon-check.svg"> Email reports</li>
           </ul>
           <button class="button" >Start my trial</button>
-        </section>  </input>
+        </section> 
       </section>
     </div>
 </section>
+<script src="./app.js"></script>
 </body>
 </html>
