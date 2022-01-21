@@ -4,7 +4,7 @@
   --LightGrayishRed: hsl(14, 92%, 95%);
   --LightRed: hsl(15, 100%, 70%);
   --PaleBlue: hsl(226, 100%, 87%);
-  --White: hsl (0, 0%, 100%);
+  --White: hsl(0, 0%, 100%);
   --VeryPaleBlue: hsl(230, 100%, 99%);
   --LightGrayishBlue: hsl(224, 65%, 95%);
   --LightBlue: hsl(223, 50%, 87%);
@@ -95,7 +95,8 @@ h3{
   height: 0.5em;
   outline: none;
   border-radius: 3px;
-  background-color: linear-gradient(90deg, var(--LightGrayishBlue) 80%, 90deg,var(--LightGrayishBlue) 50%) ;
+  background: linear-gradient(90deg, var(--StrongCyan) 50%, var(--LightGrayishBlue) 50%);
+  background: linear-gradient(90deg, var(--StrongCyan) 80%, 90deg,var(--LightGrayishBlue) 50%) ;
   margin:0;
   top: 50%;
   display: flex;
@@ -113,6 +114,10 @@ h3{
   position:relative;
   bottom: 50%;
 }
+::selection{
+  background-color: var(--StrongCyan);
+}
+
 
 /* Toggle styles */
 .toggleContainer{
