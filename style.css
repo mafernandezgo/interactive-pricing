@@ -96,7 +96,6 @@ h3{
   outline: none;
   border-radius: 3px;
   background: linear-gradient(90deg, var(--StrongCyan) 50%, var(--LightGrayishBlue) 50%);
-  background: linear-gradient(90deg, var(--StrongCyan) 80%, 90deg,var(--LightGrayishBlue) 50%) ;
   margin:0;
   top: 50%;
   display: flex;
